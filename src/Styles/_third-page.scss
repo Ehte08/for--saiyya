@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+#third-page{
+  background-color: rgb(0, 0, 194);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow: scroll;
+  position: relative;
+  border-bottom: solid rgb(0, 0, 194) 0px;
+}
+
+
+.page3-title{
+  display: flex;
+  flex-direction: column;
+  font-family: "Limelight", Arial;
+  text-align: center;
+  justify-content: space-around;
+  position: absolute;
+  font-weight: 700;
+  font-size: 6vw;
+  inset: 130px auto auto auto;
+}
+
+#byline3{
+  font-family: "Alex Brush";
+  font-weight: 400;
+  font-size: 6vw;
+}
+
+.video-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 90vw;
+  position: absolute;
+  column-gap: 40px;
+  row-gap: 80px;
+  inset: 400px auto auto auto;
+  padding: 0 0 60px 0;
+
+  div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    aspect-ratio: 16/9;
+  }
+
+  video{
+    filter: grayscale(10);
+    transition: filter 500ms ease-out;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    box-shadow: -8px 8px 5px #2c2c2c;
+    border-radius: 5px;
+  }
+
+  video:hover{
+    filter: grayscale(0);
+  }  
+
+}
+
+#film-3{
+  background-color: red;
+}
+
+#film-4{
+  background-color: white;
+}
+
+#film-5{
+  background-color: orange;
+}
+
+#film-6{
+  background-color: turquoise;
+}
+
+@media #{$wide} {
+    .page3-title{
+      font-size: 10vw;
+      inset: 11vh auto auto auto;
+    }
+
+    .video-grid{
+      grid-template-columns: 1fr 1fr;
+      width: 1000px;
+      row-gap: 30px;
+      inset: 400px auto auto auto;
+
+      div{
+        width: 400px;
+        aspect-ratio: 16/9;
+      }
+    }
+
+    #byline3{
+      font-size: 9vw;
+    }
+
+    }
+
+@media #{$mobile} {
+
+  .page3-title{
+    font-size: 10vw;
+    inset: 11vh auto auto auto;
+
+  }
+
+  .video-grid{
+    grid-template-columns: 1fr;
+    width: 90vw;
+    row-gap: 30px;
+    inset: 300px auto auto auto;
+  }
+
+  .video-grid div{
+    width: 90vw;
+    aspect-ratio: 16/9;
+    z-index: 0;
+  }
+
+  #byline3{
+    font-size: 9vw;
+  }
+}
+
+@media #{$iPhone} {
+  .video-grid{
+    inset: 190px auto auto auto;
+  }
+
+  .page3-title{
+    inset: 8vh auto auto auto;
+
+  }
+}

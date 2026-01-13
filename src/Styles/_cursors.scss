@@ -1,0 +1,60 @@
+.cursor{
+    z-index: 10010;  /* Highest Z-index of all so it's even about the header */
+    position: fixed; 
+    top: 25px;
+    left: 115px;
+    pointer-events: none;
+}  
+/* To define the div containing all the hearts and shape all the hearts together*/
+
+@media (hover: none) and (pointer: coarse) { .cursor { div { display: none; } } }
+
+.cursor div::after{
+    left: 0; 
+    transform: rotate(45deg); 
+    transform-origin :100% 100%;
+    transition-timing-function: ease-out;
+}
+
+.cursor div::before, div::after{
+    content: ""; 
+    border-radius: 50px 50px 0 0; 
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%; 
+    position: absolute;
+}
+
+.heart:before, .heart:after { 
+    left: 15px; 
+    top: 0; 
+    width: 15px; 
+    height: 23px; 
+    background: rgb(250, 150, 167);
+} 
+
+.heart2:before, .heart2:after {
+    left: 18px; 
+    top: 0; 
+    width: 18px; 
+    height: 27px; 
+    background: red;
+} 
+
+.heart3:before, .heart3:after { 
+    left: 12px; 
+    top: 0; 
+    width: 12px;
+    height: 19px;
+    background: rgb(213, 14, 213);
+    border-radius: 50px 50px 0 0; 
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%; 
+} 
+
+.heart4:before, .heart4:after { 
+    left: 9px; 
+    top: 0; 
+    width: 9px; 
+    height: 14px; 
+    background: rgb(52, 102, 218); 
+}

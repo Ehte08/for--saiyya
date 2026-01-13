@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
+#header{
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    height: 10vh;
+    inset: 0 0 0 0;
+    padding: 20px 0 0 0;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+  }
+
+@media (min-width: 1200px) {
+    .navbar button{
+        padding: 0 800px 0 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    #header{
+        inset: 10px 0 0 0;
+    }
+}
+
+@media (max-width: 690px) {
+    #header{
+        inset: 5px 0 0 0;
+    }
+}
+
+@media #{$iPhone} {
+    #header{
+        inset: -5px 0 0 0;
+    }
+}
+
+#her-name{
+    margin: 10px 0 0 30px;
+    font-size: 6vw;
+    cursor: pointer;
+}
+
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 70vw;
+    margin: 10px 0 0 0;
+    inset: auto 3vw auto auto;
+    padding: 0 20px 0 0;
+
+    button{
+        font-size: 2vw;
+        cursor: pointer;
+    }
+
+    :active {
+    transform: scale(0.92);
+    }
+}
+
+#header button{
+    text-decoration: none;
+    color: black;
+    padding: 0 0 0 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-family: "Alex Brush", cursive;
+}

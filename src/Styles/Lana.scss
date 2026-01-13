@@ -1,0 +1,36 @@
+@import './sizes';
+@import './header';
+@import './second-page';
+@import './cursors';
+@import './third-page';
+@import './first-page';
+@import './fourth-page';
+@import './music-player';
+@import './gf';
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  overflow-x: hidden; // kills right-side scroll
+}
+
+.con{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 100vw;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+section{
+  height: 100vh;
+  position: relative;
+}

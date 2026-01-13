@@ -1,0 +1,159 @@
+@import url("https://fonts.cdnfonts.com/css/brodast");
+
+.gfPage {
+  height: 100vh;
+  position: relative;
+  padding: 20px;
+  background-color: rgb(232,140,161);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  .flowerLayer{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 400ms ease;
+    pointer-events: none;
+    z-index: 99;
+  }
+
+  h1 {
+    font-family: "Brodast", sans-serif;
+  }
+
+  /* ===== HERO + TIARA OVERLAY ===== */
+  .heroWrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-height: 320px;
+    border-radius: 18px;
+    overflow: hidden;
+
+    .heroImg {
+      height: 30vh; // control hero size here
+      object-fit: contain;
+      border-radius: 18px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      position: relative;
+      z-index: 2;
+      display: block;
+    }
+
+    .tiara {
+      position: absolute;
+      inset: 0;
+      left: -20px;
+      width: 30vh;
+      height: 5vh;
+      object-fit: contain;
+
+      z-index: 3; // put tiara ABOVE hero if you want it visible
+      opacity: 0;
+      transition: opacity 220ms ease;
+      pointer-events: none;
+
+      &.isOn {
+        opacity: 1;
+      }
+    }
+  }
+
+  .question {
+    margin: 18px 0 10px;
+    text-align: center;
+    font-size: clamp(26px, 4vw, 40px);
+    letter-spacing: -0.02em;
+  }
+
+  /* ===== BUTTON ROW (YES + NO same level) ===== */
+  .buttonsWrap {
+    position: relative;
+    width: min(520px, 80vw);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between; // ✅ side-by-side, spaced apart
+    gap: 16px;
+  }
+
+    .yesBtn {
+        position: relative; // needed so yesLabel can overlay inside
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        width: 160px;
+        height: 150px;
+        display: grid;
+        place-items: center; 
+        position: relative;
+        transform: scale(var(--scale));
+        transform-origin: center;
+        transition: transform 160ms ease;
+    }
+
+    .yesHeart {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+        .yesLabel {
+        position: absolute;
+        display: grid;
+        place-items: center;      // centers "Yes"
+        z-index: 3;               // on top
+        pointer-events: none;     // clicks go to button
+        color: black;
+        font-family: b;
+        font-weight: 700;
+        font-family: "Brodast", sans-serif;
+        font-size: 18px;
+        text-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+        }
+
+
+
+/* NO BUTTON (same row as YES) */
+  .noBtn {
+    position: relative; // ✅ keeps it on same flex row
+    padding: 12px 20px;
+
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    background: white;
+
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+
+    transition: transform 120ms ease, opacity 120ms ease;
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+
+.noBtn.isFloating {
+    position: fixed;     // now left/top work
+    z-index: 10;
+    top: 0;
+    left: 0;
+    will-change: transform;
+    transition: transform 160ms ease, opacity 120ms ease;
+}
+
+}
+
+.gfPage.flowersOn .flowerLayer {
+     opacity: 1;
+}

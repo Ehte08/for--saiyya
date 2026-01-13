@@ -1,0 +1,257 @@
+@import url("https://fonts.cdnfonts.com/css/centers-george");
+@import url('https://fonts.cdnfonts.com/css/sigmar');
+@import url('https://fonts.cdnfonts.com/css/megan-hand');
+
+.page4-title {
+  position: absolute;
+  top: 16vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+
+  #byline4 {
+    font-family: "Centers George", sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+  }
+}
+
+.music-player-root {
+  .music-player-hero {
+    display: grid;
+    grid-template-columns: 90px 1fr 90px;
+    gap: 12px;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 12px;
+    grid-template-columns: 130px 1fr 130px;
+
+    .music-player-hero-side,
+    .music-player-hero-main {
+      transition:
+        transform 320ms cubic-bezier(.2,.8,.2,1),
+        opacity 320ms cubic-bezier(.2,.8,.2,1),
+        filter 320ms cubic-bezier(.2,.8,.2,1);
+      will-change: transform, opacity, filter;
+    }
+
+    .music-player-hero-side {
+      height: 250px;
+      border-radius: 5px;
+      overflow: hidden;
+      padding: 0;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      opacity: 0.35;
+      filter: blur(0.2px);
+      transition: transform 160ms ease, opacity 160ms ease;
+
+      &:hover {
+        opacity: 0.65;
+        transform: scale(1.02);
+      }
+
+      &:active {
+        transform: scale(0.99);
+      }
+
+      .music-player-hero-side-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 240ms ease, opacity 240ms ease;
+        will-change: transform, opacity;
+      }
+
+      &:hover .music-player-hero-side-img {
+        transform: scale(1.03);
+      }
+
+      .music-player-hero-main-img,
+      .music-player-hero-side-img {
+        animation: mpImgIn 400ms ease;
+      }
+
+      .music-player-hero-side-fallback {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        font-size: 28px;
+        background: rgba(255, 255, 255, 0.06);
+      }
+    }
+
+    .music-player-hero-main {
+      position: relative;
+      height: 300px;
+      border-radius: 5px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 260ms ease;
+
+      &:active {
+        transform: scale(0.99);
+      }
+
+      .music-player-hero-main-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .music-player-hero-main-fallback {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        font-size: 42px;
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .music-player-hero-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 14px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
+        color: black;
+        
+        .music-player-title{
+          font-family: 'MeganHand', sans-serif;
+          font-size: 1.5rem;
+          line-height: 1.05;
+          margin-top: 2px;
+
+        }
+        .music-player-artist{
+          font-family: 'Sigmar', sans-serif;
+          font-size: 1.2rem;
+          line-height: 1.05;
+          margin: -2px 0 0 0;
+        }
+    }
+  }
+}
+
+  .below-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+
+    .music-player-time {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+
+      .music-player-seek {
+        width: 100%;
+        padding: 0 12px;
+        padding-bottom: 4px;
+        
+        .music-player-seek-input {
+          width: 100%;
+          -webkit-appearance: none;
+          appearance: none;
+          background: transparent;
+          cursor: pointer;
+          border-radius: 999px;
+          overflow: hidden;
+
+          /* Track */
+          &::-webkit-slider-runnable-track {
+            height: 6px;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, 0.15);
+          }
+
+          &::-moz-range-track {
+            height: 6px;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, 0.15);
+          }
+
+          /* Filled part (Firefox only) */
+          &::-moz-range-progress {
+            height: 6px;
+            border-radius: 999px;
+            background: darkred;
+          }
+
+          /* Hide thumb (Chrome/Safari) */
+          &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 0;
+            height: 0;
+            border: none;
+            background: transparent;
+            box-shadow: -1000px 0 0 1000px darkred; /* keep fill trick */
+          }
+
+          /* Hide thumb (Firefox) */
+          &::-moz-range-thumb {
+            width: 0;
+            height: 0;
+            border: none;
+            background: transparent;
+          }
+        }
+
+        }
+      }
+    .music-player-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      font-size: 35px;
+      width: 100%;
+
+      button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        color: #000;
+        opacity: 0.8;
+        font-size: 28px;
+        padding: 14px 18px;
+        line-height: 1;
+
+        &:hover {
+          opacity: 1;
+          transform: none;
+        }
+
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+}
+
+@keyframes mpImgIn {
+  from { opacity: 0; transform: scale(1.01); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+
+.music-player-hero {
+  .music-player-hero-side {
+    transition: opacity 260ms ease;
+    &:hover { opacity: 0.6; transform: none; }
+  }
+
+}
+
