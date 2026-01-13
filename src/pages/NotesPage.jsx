@@ -283,7 +283,7 @@ export default function NotesPage() {
             >
               <img
                 className="notes-heart"
-                src="/Assets/heart.webp"
+                src="./Assets/heart.webp"
                 alt="heart"
                 onClick={onHeartClick}
                 onDoubleClick={onHeartDoubleClick}

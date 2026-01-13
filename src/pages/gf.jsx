@@ -73,7 +73,7 @@ useEffect(() => {
 
   const rand = (min, max) => min + Math.random() * (max - min);
 
-  const flowerUrls = ["/Assets/flowers/hib.png", "/Assets/flowers/lil.png", "/Assets/flowers/pink.png"];
+  const flowerUrls = ["./Assets/flowers/hib.png", "./Assets/flowers/lil.png", "./Assets/flowers/pink.png"];
 
   // =========================
   // ✅ CHANGE THIS NUMBER

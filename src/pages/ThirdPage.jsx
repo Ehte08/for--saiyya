@@ -60,12 +60,12 @@ function Clip({ src, id }) {
 export default function ThirdPage() {
   const clips = useMemo(
     () => [
-      { id: "film1", src: "/Assets/clips/SPIDER-MAN_ ACROSS THE SPIDER-VERSE Clip - Gwen & Miles.mp4" },
-      { id: "film2", src: "/Assets/clips/kat.mp4" },
-      { id: "film3", src: "/Assets/clips/500 days.mp4" },
-      { id: "film4", src: "/Assets/clips/Eyes full edit.mp4" },
-      { id: "film5", src: "/Assets/clips/la-la-land.mp4" },
-      { id: "film6", src: "/Assets/clips/states.mp4" },
+      { id: "film1", src: "./Assets/clips/SPIDER-MAN_ ACROSS THE SPIDER-VERSE Clip - Gwen & Miles.mp4" },
+      { id: "film2", src: "./Assets/clips/kat.mp4" },
+      { id: "film3", src: "./Assets/clips/500 days.mp4" },
+      { id: "film4", src: "./Assets/clips/Eyes full edit.mp4" },
+      { id: "film5", src: "./Assets/clips/la-la-land.mp4" },
+      { id: "film6", src: "./Assets/clips/states.mp4" },
     ],
     []
   );
