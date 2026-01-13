@@ -1,7 +1,7 @@
 {
   "name": "first-react",
   "private": true,
-  "homepage": "https://ehte08.github.io/for--saiyya/",
+  "homepage": "https://for-saiyya.vercel.app/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
