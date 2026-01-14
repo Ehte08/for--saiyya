@@ -14,7 +14,7 @@ export default function MusicPlayer() {
       { title: "Embrasse Moi", artist: "Clementine", mp3Src: "./Assets/Songs/moi.mp3", bannerImageSrc: "./Assets/album-cover/spidey.png" },
       { title: "Love Bug", artist: "Okayceci", mp3Src: "./Assets/Songs/bug.mp3", bannerImageSrc: "./Assets/album-cover/sai2.jpeg" },
       { title: "The 1", artist: "Taylor Swift", mp3Src: "./Assets/Songs/one.mp3", bannerImageSrc: "./Assets/album-cover/saie.jpeg" },
-      { title: "Mast Magan", artist: "Arjit Singh", mp3Src: "./Assets/Songs/peel.mp3", bannerImageSrc: "./Assets/album-cover/saiheart.jpeg" },
+      { title: "Pee Loon", artist: "Mohit Chauhan", mp3Src: "./Assets/Songs/peel.mp3", bannerImageSrc: "./Assets/album-cover/saiheart.jpeg" },
       { title: "Roi", artist: "Videoclub", mp3Src: "./Assets/Songs/roi.mp3", linkUrl: "https://genius.com/Genius-english-translations-videoclub-roi-english-translation-lyrics", bannerImageSrc: "./Assets/album-cover/roi.jpg" },
       { title: " En Nuit", artist: "Videoclub", mp3Src: "./Assets/Songs/nuit.mp3", linkUrl: "https://genius.com/Genius-english-translations-videoclub-en-nuit-english-translation-lyrics", bannerImageSrc: "./Assets/album-cover/super.jpeg" },
       { title: "Big City Blues", artist: "Michate", mp3Src: "./Assets/Songs/blue.mp3", bannerImageSrc: "./Assets/album-cover/saismile.jpeg" },
